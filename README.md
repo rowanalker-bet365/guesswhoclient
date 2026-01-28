@@ -31,7 +31,7 @@ guesswhoclientapi/
     ```
 2.  Run the main application:
     ```bash
-    go run cmd/api/main.go
+    go run guesswhoclientapi.go
     ```
 3.  The API server will start on `http://localhost:8080`.
 
@@ -43,7 +43,7 @@ To enable this feature, set the `REDIS_ADDR` environment variable to the address
 
 ```bash
 export REDIS_ADDR=localhost:6379
-go run cmd/api/main.go
+go run guesswhoclientapi.go
 ```
 
 If `REDIS_ADDR` is not set, the application will start normally and use only its in-memory data store, without attempting to connect to Redis. When connected, the API subscribes to the `game_updates` channel. Any message published to this channel will trigger a broadcast to all connected SSE clients, instructing them to refetch the latest game state.
