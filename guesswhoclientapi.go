@@ -1,10 +1,11 @@
 package main
 
 import (
-	"guesswhoclientapi/internal/api"
-	"guesswhoclientapi/internal/redis"
 	"log"
 	"net/http"
+
+	"guesswhoclientapi/api"
+	"guesswhoclientapi/redis"
 )
 
 func main() {

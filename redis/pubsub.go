@@ -5,8 +5,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-redis/redis/v8"
-	"github.com/rowanalker/guesswhoclientapi/internal/sse"
+	"guesswhoclientapi/sse"
+
+	"github.com/go-redis/redis/v8"	
 )
 
 var ctx = context.Background()
